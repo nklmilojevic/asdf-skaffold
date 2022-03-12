@@ -2,6 +2,7 @@
 
 set -euo pipefail
 
+GH_REPO="https://github.com/GoogleContainerTools/skaffold"
 DOWNLOAD_URL="https://storage.googleapis.com/skaffold/releases"
 TOOL_NAME="skaffold"
 TOOL_TEST="skaffold version"
