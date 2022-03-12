@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-GH_REPO="https://github.com/GoogleContainerTools/skaffold"
+DOWNLOAD_URL="https://storage.googleapis.com/skaffold/releases"
 TOOL_NAME="skaffold"
 TOOL_TEST="skaffold version"
 
@@ -70,7 +70,7 @@ download_release() {
   local version filename url
   version="$1"
   filename="$2"
-  url="$GH_REPO/releases/download/v${version}/skaffold-$(get_platform)-$(get_arch)"
+  url="$DOWNLOAD_URL/v${version}/skaffold-$(get_platform)-$(get_arch)"
 
   echo "* Downloading $TOOL_NAME release $version..."
   curl "${curl_opts[@]}" -o "$filename" -C - "$url" || fail "Could not download $url"
