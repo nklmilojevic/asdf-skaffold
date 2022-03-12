@@ -20,4 +20,4 @@ jobs:
         uses: asdf-vm/actions/plugin-test@v1
         with:
           command: skaffold version
-          version: 1.36.0
+          # version: 1.36.0
